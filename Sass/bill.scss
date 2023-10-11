@@ -1,0 +1,242 @@
+@import "variable";
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+    min-width:  1440px;
+    height: 577px;
+
+}
+.billBox
+{
+    min-width:  1440px;
+    min-height: 577px;
+    min-width: fit-content;
+    border: 2px solid #c22728;
+    margin: 50px 20px 50px 20px;
+    overflow: visible;
+
+    .displayrow
+    {
+        display: flex;
+        width: 100%;
+    }
+    .f20
+    {
+        font-weight: 700;   
+    }
+    p
+    {
+        font-size: 16px;
+    }
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        h1
+        {
+            margin: 0;
+
+        }
+        
+    }
+    section
+    {
+        display: grid;
+        grid-template-columns: repeat(4, calc(100%/4));
+        grid-template-rows:auto;
+
+        .invo
+        {
+           grid-column-start: 1;
+           grid-column-end: 2;
+        }
+        .invDate
+        {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .invDuedate
+        {
+            // grid-column-start: 3;
+            // grid-column-end: 5;
+        }
+        .custBillto
+        {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+    }
+    .rows
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .row
+        {
+            display: flex;
+            flex-direction: row;
+            margin-top: 3px;
+            p
+            {
+                width: 100%;
+            }
+            &:nth-child(n+3)
+            {
+                background-color: #f9e9e9;
+                color: black;
+            }
+        }
+        .heading
+        {
+            background-color: #c22728;
+        }
+    }
+    footer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+#print {
+    background-color: #0A131E;
+    border: none;
+    border-radius: 2px;
+    display: block;
+    margin: 0px auto;
+    padding: 12px;
+    color: $white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    outline: none;
+    letter-spacing: 0.1ch;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+}
+
+#loading {
+    background-color: $black;
+    height: 100%;
+    width:  1440px;
+    position: fixed;
+    z-index: 100;
+    .middle {
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+
+
+        .bar {
+            width: 10px;
+            height: 70px;
+            background: #fff;
+            display: inline-block;
+            transform-origin: bottom center;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+            animation: loader 1.2s linear infinite;
+        }
+
+        .bar1 {
+            animation-delay: 0.1s;
+        }
+
+        .bar2 {
+            animation-delay: 0.2s;
+        }
+
+        .bar3 {
+            animation-delay: 0.3s;
+        }
+
+        .bar4 {
+            animation-delay: 0.4s;
+        }
+
+        .bar5 {
+            animation-delay: 0.5s;
+        }
+
+        .bar6 {
+            animation-delay: 0.6s;
+        }
+
+        .bar7 {
+            animation-delay: 0.7s;
+        }
+
+        .bar8 {
+            animation-delay: 0.8s;
+        }
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: scaleY(0.1);
+        // background: black;
+    }
+
+    50% {
+        transform: scaleY(1);
+        background: yellowgreen;
+    }
+
+    100% {
+        transform: scaleY(0.1);
+        background: transparent;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    header {
+        // flex-direction: column;
+        padding: 1rem 0;
+
+        .right {
+            height: 45px;
+            width: 45px;
+            max-width: 45px;
+            margin-right: 5px;
+
+            i {
+                font-size: 32px;
+                padding: 8px;
+            }
+        }
+
+        .left {
+            order: -1;
+            margin-left: 5px;
+        }
+    }
+
+}
+
+@page
+{
+    margin: 0;
+    size: letter; /*or width then height 150mm 50mm*/
+    display: block;
+    overflow: visible;
+    float: none;
+}

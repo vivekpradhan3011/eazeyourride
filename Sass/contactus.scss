@@ -1,0 +1,39 @@
+@import "header";
+
+body
+{
+    overflow: scroll;
+}
+main
+{
+    height: 100%;
+    margin: 160px 150px 0px 150px;
+    text-align: justify;
+    
+    
+    p
+    {
+        display: inline-block;
+        margin: 15px 0px 0px 0px;
+    }
+    dl
+    {
+        margin-left: 20px;
+        margin-top: 10px;
+        dt
+        {
+            font-weight: bold;
+        }
+        dd
+        {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main
+    {
+        margin: 120px 20px 0px 20px;
+    }
+}

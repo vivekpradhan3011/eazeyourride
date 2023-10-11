@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register:EAZEYOURRIDE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Sass/style.css">    
+</head>
+<body>
+    <header>
+        <div class="left">
+            <img src="./Sass/assets/Logo.png" alt="brand_Image">
+        </div>
+        <div class="right">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            
+            <p id="heroText">Welcome Back To <span>Eaze Ride</span></p>
+            <p class="lightText">Join us! and enjoy Your Ride</p>
+
+            <div class="inputst input">
+                <label for="name">Enter Your Full Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="input">
+                <label for="email">Enter Your Email Id</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+            <div class="input">
+                <label for="mNo">Enter Your Mobile Number</label>
+                <input type="text" name="mNo" id="mNo" required>
+            </div>
+            <div class="input">
+                <label for="pwd">Create New Password</label>
+                <input type="text" name="pwd" id="pwd" required>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Create Account" id="verificationCodebtn">
+            </div>
+            <div class="redirect">
+                <p>Do you have an account ? </p>
+                <a href="./login.html">Login</a>
+            </div>
+
+        </div>
+        <div class="right">
+            <img src="./Sass/assets/Background_Bike.jpg" alt="">
+        </div>
+    </main>
+    <script  type="module" src="./javascript/firebase/firebase.js"></script>
+    <script type="module" src="./javascript/register.js"></script>
+</body>
+</html>

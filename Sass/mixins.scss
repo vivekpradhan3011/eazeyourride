@@ -1,0 +1,50 @@
+@import "variable";
+@mixin button($width, $height, $bord-radious, $lh) {
+    min-width: $width;
+    min-height: $height;
+    background-color: $black;
+    font-family: $font-family;
+    outline: none;
+    border: none;
+    color: $white;
+    padding: 12px;
+    border-radius: $bord-radious;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: $lh;
+    letter-spacing: 0.1ch;
+}
+
+@mixin input($m)
+{
+    width: 600px;
+    margin-top: $m;
+    position: relative;
+
+}
+@mixin typeText($width, $height) {
+    width: $width;
+    height: $height;
+    padding-bottom: 22px;
+    padding-top: 48px;
+    padding-right: 32px;
+    border: none;
+    outline: none;
+    background-color: $white;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 32px;
+    line-height: 27.12px;
+}
+
+@mixin label($color)
+{
+    color: $color;
+    font-weight: 400;
+    font-size: 16.97px;
+    line-height: 22.1px;
+    padding: 0px 0px 47px 32px;
+    position: absolute;
+    left: 34px;
+    top: 24px;
+}

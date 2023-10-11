@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  height: 95px;
+  background-color: #0A131E;
+  padding: 0 85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+header .left {
+  display: flex;
+}
+header .left img {
+  height: 53px;
+  max-width: 100%;
+}
+header .navbar .navbar-list {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+}
+header .navbar .navbar-list .navbar-links:link,
+header .navbar .navbar-list .navbar-links:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+header .navbar .navbar-list .navbar-links:hover,
+header .navbar .navbar-list .navbar-links:active {
+  color: #364fc7;
+}
+header .mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+header .mobile-navbar-btn .mobile-nav-icon {
+  font-size: 35px;
+  color: #ffffff;
+}
+header .mobile-navbar-btn .mobile-nav-icon[name=close-outline] {
+  display: none;
+}
+
+#loading {
+  background-color: #0A131E;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+#loading .middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#loading .middle .bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+#loading .middle .bar1 {
+  animation-delay: 0.1s;
+}
+#loading .middle .bar2 {
+  animation-delay: 0.2s;
+}
+#loading .middle .bar3 {
+  animation-delay: 0.3s;
+}
+#loading .middle .bar4 {
+  animation-delay: 0.4s;
+}
+#loading .middle .bar5 {
+  animation-delay: 0.5s;
+}
+#loading .middle .bar6 {
+  animation-delay: 0.6s;
+}
+#loading .middle .bar7 {
+  animation-delay: 0.7s;
+}
+#loading .middle .bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(1);
+    background: yellowgreen;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name=close-outline] {
+    display: block;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name=menu-outline] {
+    display: none;
+  }
+  header {
+    padding: 1rem 0;
+    position: relative;
+  }
+  header .mobile-navbar-btn {
+    display: block;
+    margin-right: 20px;
+    z-index: 999;
+  }
+  header .navbar {
+    width: 100%;
+    height: 100vh;
+    background-color: #0A131E;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  header .navbar .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .left {
+    order: -1;
+    margin-left: 5px;
+  }
+}
+body {
+  overflow: scroll;
+}
+
+main {
+  height: 100%;
+  margin: 160px 150px 0px 150px;
+  text-align: justify;
+}
+main p {
+  display: inline-block;
+  margin: 15px 0px 0px 0px;
+}
+main dl {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+main dl dt {
+  font-weight: bold;
+}
+main dl dd {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 120px 20px 0px 20px;
+  }
+}/*# sourceMappingURL=contactus.css.map */

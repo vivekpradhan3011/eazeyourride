@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ride : EAZEYOURRIDE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./Sass/ride.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+
+<body>
+  <div id="loading">
+    <div class="middle" id="middle">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <div class="bar bar4"></div>
+      <div class="bar bar5"></div>
+      <div class="bar bar6"></div>
+      <div class="bar bar7"></div>
+      <div class="bar bar8"></div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="left">
+      <img src="./Sass/assets/Logo.png" alt="brand_Image" />
+    </div>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li><a class="navbar-links" href="bill.html">Previous Recipt</a></li>
+        <li><a class="navbar-links" href="aboutus.html">About Us</a></li>
+        <li><a class="navbar-links" href="contactus.html">Contact Us</a></li>
+        <li><a class="navbar-links" href="faq.html">FAQ'S</a></li>
+        <li><a class="navbar-links" href="privacypolicy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-navbar-btn">
+      <i class="fa-solid fa-bars mobile-nav-icon" name="menu-outline"></i>
+      <i class="fa-solid fa-xmark mobile-nav-icon" name="close-outline"></i>
+    </div>
+  </header>
+  <main>
+    <div class="section1">
+      <div id="flip">
+        <p>Start Ride</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div id="panel" class="startRide">
+        <div class="row1">
+          <div class="text">
+            <p class="heroText">Start Ride</p>
+            <p class="lightText">fill all details to begin your ride.</p>
+          </div>
+          <div class="btn">
+            <input type="submit" value="Start your Ride" id="startRidebtn" />
+          </div>
+        </div>
+        <!--Row 1 End Row 2 Start-->
+        <div class="row2">
+          <div class="uploadphoto">
+            <p class="heroText">Upload Meter Photo</p>
+            <p class="lightText">
+              To start the ride, upload a photo of the meter
+            </p>
+            <div class="file">
+              <label for="startMeter">
+                <i class="fa fa-2x fa-light fa-image"></i>
+                <p>Upload Image</p>
+                <input type="file" accept="image/*" capture="camera" name="startMeter" id="startMeter" />
+              </label>
+            </div>
+          </div>
+          <div class="measureKm">
+            <p class="heroText">Starting Km</p>
+            <p class="lightText">
+              Enter starting Km from meter at ride start
+            </p>
+            <input type="text" name="Km" id="startingKm" placeholder="Km" required />
+          </div>
+        </div>
+        <!--Row 2 End Row 3 Start-->
+        <div class="row3">
+          <div class="condition">
+            <p class="heroText">Date & Time</p>
+            <p class="lightText">Check Default Time</p>
+            <div class="dateTime">
+              <input type="date" class="date" name="date" id="startingDate" readonly />
+              <input type="text" class="time" name="time" id="startingTime" readonly />
+            </div>
+          </div>
+          <div class="checkbox">
+            <p class="heroText">Review Pricing Details</p>
+            <p class="lightText">Before srtar ride check price</p>
+            <div class="box">
+              <input type="checkbox" name="price" id="price" checked disabled />
+              <label for="price">Rs 4 per km and Rs 1 Per Min.</label>
+            </div>
+          </div>
+        </div>
+        <!--Row Three End-->
+      </div>
+    </div>
+    <!--RIght Side Part-->
+    <div class="section2">
+      <div id="flip2">
+        <p>End Ride</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div id="panel2" class="endRide">
+        <div class="row1">
+          <div class="text">
+            <p class="heroText">End Ride</p>
+            <p class="lightText">fill all details to end your ride.</p>
+          </div>
+          <div class="btn">
+            <input type="submit" value="End your Ride" id="endRidebtn" />
+          </div>
+        </div>
+        <!--Row 1 End Row 2 Start-->
+        <div class="row2">
+          <div class="uploadphoto">
+            <p class="heroText">Upload Meter Photo</p>
+            <p class="lightText">
+              To end the ride, upload a photo of the meter
+            </p>
+            <div class="file">
+              <label for="endMeter">
+                <i class="fa fa-2x fa-light fa-image"></i>
+                <p>Upload Image</p>
+                <input type="file" accept="image/*" capture="camera" name="endMeter" id="endMeter" />
+              </label>
+            </div>
+          </div>
+          <div class="measureKm">
+            <p class="heroText">Ending Km</p>
+            <p class="lightText">Enter ending Km from meter at ride end</p>
+            <input type="text" name="endingKm" id="endingKm" placeholder="Km" required />
+          </div>
+        </div>
+        <!--Row 2 End Row 3 Start-->
+        <div class="row3">
+          <div class="condition">
+            <p class="heroText">Date & Time</p>
+            <p class="lightText">Check Default Time</p>
+            <div class="dateTime">
+              <input type="date" class="date" name="date" id="endingDate" readonly />
+              <input type="text" class="time" name="time" id="endingTime" readonly />
+            </div>
+          </div>
+          <div class="checkbox">
+            <p class="heroText">Review Pricing Details</p>
+            <p class="lightText">Before end ride check price</p>
+            <div class="box">
+              <input type="checkbox" name="price" id="price" checked disabled />
+              <label for="price">Rs 4 per km and Rs 1 Per Min.</label>
+            </div>
+          </div>
+        </div>
+        <!--Row Three End-->
+      </div>
+    </div>
+  </main>
+  <section>
+    <div id="flip3">
+      <p>Payment</p>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="payment" id="panel3">
+      <div class="row1">
+        <div class="left">
+          <div class="heading">
+            <p class="heroText">Pricing Detail</p>
+            <p class="lightText">Show Pricing Detail</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="oid">
+            <p class="text">ORDER ID</p>
+            <p class="number" id="oid">#8990383</p>
+          </div>
+          <div class="cid">
+            <p class="text">CUSTOMER ID</p>
+            <p class="number" id="userName">USER0001</p>
+          </div>
+          <input type="submit" value="Continue to Payment" />
+        </div>
+      </div>
+      <div class="row2">
+        <div class="left">
+          <div class="iteam">
+            <p class="r2heading">QTY</p>
+            <div class="dtl">
+              <p>Per Km</p>
+              <p id="setKm">000 Km</p>
+            </div>
+            <div class="dtl">
+              <p>Per Min</p>
+              <p id="setTime">00 Min</p>
+            </div>
+          </div>
+
+          <div class="iteam">
+            <p class="r2heading">Pricing Rate</p>
+            <div class="dtl">
+              <p>Per Km</p>
+              <p>Rs.4</p>
+            </div>
+            <div class="dtl">
+              <p>Per Min</p>
+              <p>Rs.1</p>
+            </div>
+          </div>
+
+          <div class="iteam">
+            <p class="r2heading">Total Amount</p>
+            <div class="dtl">
+              <p>On Km</p>
+              <p id="amountOnkm">Rs.000</p>
+            </div>
+            <div class="dtl">
+              <p>On Min</p>
+              <p id="amountOnmin">Rs.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="total">
+            <p class="hero">SUBTOTAL</p>
+            <p class="subTotal" id="subTotal">Rs.000</p>
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Continue to payment" id="pymentBtn" />
+    </div>
+  </section>
+  <script type="module" src="./javascript/ride.js"></script>
+  <script type="module" src="./javascript/checkout.js"></script>
+</body>
+
+</html>

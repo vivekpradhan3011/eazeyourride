@@ -1,0 +1,185 @@
+@import "header";
+
+main {
+    height: 100%;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .left {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 45px 61px 0px 72px;
+
+        #heroText {
+            font-family: $font-family;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 47px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            span {
+                color: $red;
+            }
+        }
+
+        .lightText {
+            color: $light-font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20.8286px;
+            line-height: 27px;
+        }
+
+        .input {
+            width: 100%;
+            margin: 12px 0px 0px 0px;
+            position: relative;
+
+            label {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16.9714px;
+                line-height: 22px;
+                color: $light-font;
+                padding: 0px 0px 47px 32px;
+                position: absolute;
+                left: 34px;
+                top: 24px;
+            }
+
+            input[type=text] {
+                width: 100%;
+                height: 97px;
+                padding: 48px 32px 22px 66px;
+                border: none;
+                outline: none;
+                background-color: $white;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 27.12px;
+
+                &:hover {
+                    background-color: rgba(173, 216, 230, 0.192);
+                    border-bottom: 1px solid $border;
+                }
+            }
+
+        }
+
+        .inputst {
+            margin: 38px 0px 0px 0px;
+        }
+
+        .btn {
+            width: 552px;
+            height: 57px;
+
+
+            input[type=submit] {
+                height: 100%;
+                width: 100%;
+                background-color: #0A131E;
+                border: none;
+                border-radius: 5px;
+                margin: 36px 0px 0px 0px;
+                padding: 12px;
+                color: $white;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 23px;
+                outline: none;
+                letter-spacing: 0.1ch;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+
+        .redirect {
+            width: 100%;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16.83px;
+            line-height: 22px;
+            text-align: center;
+            margin: 82px 0px 49px 0px;
+
+            p {
+                font-family: $font-family;
+                display: inline-block;
+            }
+
+            a {
+                display: inline-block;
+            }
+        }
+
+    }
+
+    .right {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        main {
+            flex-direction: column;
+            padding: 0px;
+
+            .right {
+                flex: 1 1 100%;
+                order: -1;
+                margin: 39px 10px 10px 10px 10px;
+            }
+            .left
+            {
+                flex: 1 1 100%;
+                order: 0;
+                flex-direction: row;
+                justify-content: normal;
+                align-content: flex-start;
+                margin: 100px 20px 0px 20px;
+                .heroText
+                {
+                    text-align: left;
+                }
+                .lightText
+                {
+                    text-align: left;
+                }
+                .input
+                {
+                    label
+                    {
+                        padding-left: 0px;
+                    }
+                    input[type=text]
+                    {
+                        padding-left: 35px;
+                    }
+                }
+            }
+
+            
+        }
+    }
+}

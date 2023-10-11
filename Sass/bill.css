@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  min-width: 1440px;
+  height: 577px;
+}
+
+.billBox {
+  min-width: 1440px;
+  min-height: 577px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  border: 2px solid #c22728;
+  margin: 50px 20px 50px 20px;
+  overflow: visible;
+}
+.billBox .displayrow {
+  display: flex;
+  width: 100%;
+}
+.billBox .f20 {
+  font-weight: 700;
+}
+.billBox p {
+  font-size: 16px;
+}
+.billBox header {
+  display: flex;
+  flex-direction: column;
+}
+.billBox header h1 {
+  margin: 0;
+}
+.billBox section {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: auto;
+}
+.billBox section .invo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.billBox section .invDate {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.billBox section .custBillto {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.billBox .rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.billBox .rows .row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3px;
+}
+.billBox .rows .row p {
+  width: 100%;
+}
+.billBox .rows .row:nth-child(n+3) {
+  background-color: #f9e9e9;
+  color: black;
+}
+.billBox .rows .heading {
+  background-color: #c22728;
+}
+.billBox footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#print {
+  background-color: #0A131E;
+  border: none;
+  border-radius: 2px;
+  display: block;
+  margin: 0px auto;
+  padding: 12px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  outline: none;
+  letter-spacing: 0.1ch;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+#print:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+#loading {
+  background-color: #0A131E;
+  height: 100%;
+  width: 1440px;
+  position: fixed;
+  z-index: 100;
+}
+#loading .middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#loading .middle .bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+#loading .middle .bar1 {
+  animation-delay: 0.1s;
+}
+#loading .middle .bar2 {
+  animation-delay: 0.2s;
+}
+#loading .middle .bar3 {
+  animation-delay: 0.3s;
+}
+#loading .middle .bar4 {
+  animation-delay: 0.4s;
+}
+#loading .middle .bar5 {
+  animation-delay: 0.5s;
+}
+#loading .middle .bar6 {
+  animation-delay: 0.6s;
+}
+#loading .middle .bar7 {
+  animation-delay: 0.7s;
+}
+#loading .middle .bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(1);
+    background: yellowgreen;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem 0;
+  }
+  header .right {
+    height: 45px;
+    width: 45px;
+    max-width: 45px;
+    margin-right: 5px;
+  }
+  header .right i {
+    font-size: 32px;
+    padding: 8px;
+  }
+  header .left {
+    order: -1;
+    margin-left: 5px;
+  }
+}
+@page {
+  margin: 0;
+  size: letter; /*or width then height 150mm 50mm*/
+  display: block;
+  overflow: visible;
+  float: none;
+}/*# sourceMappingURL=bill.css.map */

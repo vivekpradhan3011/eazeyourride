@@ -1,0 +1,778 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  height: 95px;
+  background-color: #0A131E;
+  padding: 0 85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+header .left {
+  display: flex;
+}
+header .left img {
+  height: 53px;
+  max-width: 100%;
+}
+header .navbar .navbar-list {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+}
+header .navbar .navbar-list .navbar-links:link,
+header .navbar .navbar-list .navbar-links:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+header .navbar .navbar-list .navbar-links:hover,
+header .navbar .navbar-list .navbar-links:active {
+  color: #364fc7;
+}
+header .mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+header .mobile-navbar-btn .mobile-nav-icon {
+  font-size: 35px;
+  color: #ffffff;
+}
+header .mobile-navbar-btn .mobile-nav-icon[name=close-outline] {
+  display: none;
+}
+
+#loading {
+  background-color: #0A131E;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+#loading .middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#loading .middle .bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+#loading .middle .bar1 {
+  animation-delay: 0.1s;
+}
+#loading .middle .bar2 {
+  animation-delay: 0.2s;
+}
+#loading .middle .bar3 {
+  animation-delay: 0.3s;
+}
+#loading .middle .bar4 {
+  animation-delay: 0.4s;
+}
+#loading .middle .bar5 {
+  animation-delay: 0.5s;
+}
+#loading .middle .bar6 {
+  animation-delay: 0.6s;
+}
+#loading .middle .bar7 {
+  animation-delay: 0.7s;
+}
+#loading .middle .bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(1);
+    background: yellowgreen;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name=close-outline] {
+    display: block;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name=menu-outline] {
+    display: none;
+  }
+  header {
+    padding: 1rem 0;
+    position: relative;
+  }
+  header .mobile-navbar-btn {
+    display: block;
+    margin-right: 20px;
+    z-index: 999;
+  }
+  header .navbar {
+    width: 100%;
+    height: 100vh;
+    background-color: #0A131E;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  header .navbar .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .left {
+    order: -1;
+    margin-left: 5px;
+  }
+}
+main {
+  margin: 97px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0.965243px 3.86097px -0.965243px rgba(0, 0, 0, 0.25);
+  /*----all comman design******/
+  /*----all comman design Over******/
+}
+main #flip {
+  width: 100%;
+  display: none;
+}
+main #flip2 {
+  width: 100%;
+  display: none;
+}
+main .section1 {
+  width: 50%;
+  margin: 0px 0px 0px 72px;
+}
+main .section2 {
+  width: 50%;
+  margin: 0px 72px 0px 72px;
+}
+main .startRide {
+  width: 100%;
+}
+main .endRide {
+  width: 100%;
+}
+main .heroText {
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0em;
+  text-align: left;
+  font-weight: 700;
+  font-size: 19.3049px;
+  line-height: 25px;
+}
+main .lightText {
+  color: #87939C;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.5134px;
+  line-height: 18px;
+}
+main .row1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 23px 0px 0px 0px;
+}
+main .row1 .btn {
+  width: 187px;
+  height: 60px;
+}
+main .row1 .btn input[type=submit] {
+  height: 100%;
+  width: 100%;
+  background-color: #0A131E;
+  border: none;
+  border-radius: 2px;
+  margin: 0px 0px 0px 0px;
+  padding: 12px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  outline: none;
+  letter-spacing: 0.1ch;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+main .row1 .btn input[type=submit]:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+main .row2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 13.68px 0px 0px 0px;
+}
+main .row2 .uploadphoto {
+  width: 100%;
+  margin: 13.68px 0px 0px 0px;
+}
+main .row2 .uploadphoto .file {
+  height: 69px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  border: 2px dashed #393E46;
+  opacity: 0.5;
+}
+main .row2 .uploadphoto .file label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+  color: #0A131E;
+}
+main .row2 .uploadphoto .file label i {
+  color: #0A131E;
+}
+main .row2 .uploadphoto .file label input[type=file] {
+  display: none;
+}
+main .row2 .measureKm {
+  width: 100%;
+  margin: 12px 0px 0px 20px;
+}
+main .row2 .measureKm input[type=text] {
+  width: 100%;
+  height: 68px;
+  margin: 20px 0px 0px 0px;
+  padding: 0px 0px 0px 20px;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 30.89px;
+  line-height: 27.12px;
+  border-bottom: 2px solid #BF0A30;
+  color: #BF0A30;
+}
+main .row2 .measureKm input[type=text]:hover {
+  background-color: rgba(173, 216, 230, 0.192);
+}
+main .row3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 23px 0px 17.3px 0px;
+}
+main .row3 .condition {
+  width: 100%;
+}
+main .row3 .condition .dateTime input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  /* Add this line to hide the default icon on Chrome/Safari */
+}
+main .row3 .condition .dateTime input[type=date] {
+  width: 150px;
+  max-width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14.2642px;
+  line-height: 19px;
+  position: relative;
+  padding-left: 40px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main .row3 .condition .dateTime input[type=date]::before {
+  content: "📅";
+  font-size: 20px;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .row3 .condition .dateTime input[type=text] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 15.2642px;
+  line-height: 19px;
+  height: 38.72px;
+  max-width: 150px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main .row3 .condition .dateTime input[type=time]::-webkit-calendar-picker-indicator {
+  display: none;
+  /* Add this line to hide the default icon on Chrome/Safari */
+}
+main .row3 .checkbox {
+  width: 100%;
+  margin: 0px 0px 0px 35px;
+}
+main .row3 .checkbox .box {
+  display: flex;
+  align-items: center;
+  margin: 5.39px 0px 0px 0px;
+}
+main .row3 .checkbox .box input[type=checkbox] {
+  display: none;
+}
+main .row3 .checkbox .box input[type=checkbox]:checked + label::before {
+  background-color: #bf0a30;
+  content: "✓";
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+main .row3 .checkbox .box label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+main .row3 .checkbox .box label::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+section {
+  width: 100%;
+  margin: 16px 0px 0px 0px;
+  box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 5.29599px;
+  display: flex;
+  flex-direction: column;
+}
+section #pymentBtn {
+  display: none;
+}
+section #flip3 {
+  height: 60px;
+  margin: 0px 72px 0px 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+section .payment .row1 {
+  margin: 26px 72px 0px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .payment .row1 .left .heroText {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+section .payment .row1 .left .lightText {
+  color: #87939C;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.5134px;
+  line-height: 18px;
+}
+section .payment .row1 .right {
+  display: flex;
+  align-items: center;
+}
+section .payment .row1 .right .oid {
+  margin: 0px 23.55px 0px 0px;
+}
+section .payment .row1 .right .cid {
+  margin: 0px 40.39px 0px 23.55px;
+}
+section .payment .row1 .right .text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+section .payment .row1 .right .number {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20.2033px;
+  line-height: 24px;
+  color: #008BC5;
+}
+section .payment .row1 .right input[type=submit] {
+  width: 228.13px;
+  height: 58.94px;
+  background-color: #0A131E;
+  border: none;
+  border-radius: 2px;
+  margin: 0px 0px 0px 0px;
+  padding: 12px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  outline: none;
+  letter-spacing: 0.1ch;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+section .payment .row1 .right input[type=submit]:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+section .payment .row2 {
+  margin: 26px 72px 41.18px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .payment .row2 .left {
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+}
+section .payment .row2 .left .iteam {
+  display: grid;
+  grid-template-columns: 100px 140px;
+}
+section .payment .row2 .left .iteam .r2heading {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22.3641px;
+  line-height: 27px;
+  color: #0A131E;
+}
+section .payment .row2 .left .iteam .dtl {
+  margin-top: 20px;
+}
+section .payment .row2 .left .iteam .dtl p:nth-child(1) {
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0E4672;
+}
+section .payment .row2 .left .iteam .dtl p:nth-child(2) {
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: #0E4672;
+}
+section .payment .row2 .right {
+  text-align: center;
+}
+section .payment .row2 .right .hero {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22.3641px;
+  line-height: 27px;
+  color: #0A131E;
+}
+section .payment .row2 .right .subTotal {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: #BF0A30;
+}
+
+@media (max-width: 1283px) {
+  body {
+    overflow-y: scroll;
+  }
+  main {
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+  }
+  main .section1 {
+    width: 100%;
+    margin: 19px 0px 0px 0px;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.25);
+  }
+  main .section1 #flip {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  main .section1 #flip p {
+    height: 100%;
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 700px;
+    vertical-align: middle;
+    line-height: 60px;
+  }
+  main .section1 #flip i {
+    margin: 0px 20px 0px 20px;
+  }
+  main .section1 #panel {
+    display: none;
+  }
+  main .section2 {
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+  }
+  main .section2 #flip2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  main .section2 #flip2 p {
+    height: 100%;
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 700px;
+    vertical-align: middle;
+    line-height: 60px;
+  }
+  main .section2 #flip2 i {
+    margin: 0px 20px 0px 20px;
+  }
+  main .section2 #panel2 {
+    display: none;
+  }
+  main .startRide {
+    width: 100%;
+    flex-direction: column;
+  }
+  main .endRide {
+    width: 100%;
+    flex-direction: column;
+  }
+  main .heroText {
+    font-size: 20px;
+    line-height: 23.76px;
+    font-weight: 500;
+    margin-top: 18px;
+  }
+  main .lightText {
+    margin-top: 4.18px;
+    font-size: 14px;
+    line-height: 16.63px;
+  }
+  main .row1 {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+  }
+  main .row2 {
+    padding: 18px 20px 0px 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+  main .row2 .uploadphoto label {
+    margin: 0px 20px 17.86px 0px;
+  }
+  main .row2 .uploadphoto .file {
+    max-width: 390px;
+  }
+  main .row2 .measureKm {
+    margin: 17.86px 0px 0px 0px;
+  }
+  main .row2 .measureKm input[type=text] {
+    max-width: 390px;
+  }
+  main .row3 {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 20px 0px 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+  main .row3 input[type=date] {
+    margin-top: 13.72px;
+    min-width: 200px;
+  }
+  main .row3 input[type=text] {
+    min-width: 200px;
+    margin-top: 13.72px;
+  }
+  main .row3 .checkbox {
+    margin: 25px 0px 0px 0px;
+  }
+  section #flip3 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  section #flip3 p {
+    height: 100%;
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 700px;
+    vertical-align: middle;
+    line-height: 60px;
+  }
+  section #flip3 i {
+    margin: 0px 20px 0px 20px;
+  }
+  section #panel2 {
+    display: none;
+  }
+  section .payment {
+    width: 100%;
+  }
+  section .payment .row1 {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 20px 0px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  section .payment .row1 .right {
+    flex-direction: row;
+    margin-top: 27px;
+  }
+  section .payment .row1 .right input[type=submit] {
+    display: none;
+  }
+  section .payment .row2 {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 20px 0px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  section .payment .row2 .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  section .payment .row2 .left .iteam {
+    width: 100%;
+    margin-top: 22px;
+    grid-template-columns: 45% 27.5% 27.5%;
+    grid-template-rows: 50% 50%;
+  }
+  section .payment .row2 .left .iteam .r2heading {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #0A131E;
+  }
+  section .payment .row2 .left .iteam .dtl {
+    margin-top: 0px;
+  }
+  section .payment .row2 .left .iteam .dtl p:nth-child(2) {
+    font-size: 20px;
+  }
+  section .payment .row2 .right {
+    width: 100%;
+    margin-top: 32px;
+  }
+  section .payment .row2 .right .total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .payment #pymentBtn {
+    width: 100%;
+    display: inline-block;
+    height: 58px;
+    background-color: #0A131E;
+    border: none;
+    border-radius: 2px;
+    padding: 12px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    outline: none;
+    letter-spacing: 0.1ch;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+  }
+  section .payment #pymentBtn:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  }
+}/*# sourceMappingURL=ride.css.map */

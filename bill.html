@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <link rel="stylesheet" href="Sass/bill.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="loading">
+        <div class="middle" id="middle">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+            <div class="bar bar4"></div>
+            <div class="bar bar5"></div>
+            <div class="bar bar6"></div>
+            <div class="bar bar7"></div>
+            <div class="bar bar8"></div>
+        </div>
+    </div>
+    <div class="billBox" id="billBox">
+        <header>
+            <h1 class="billName">EAZE YOUR RIDE DUE RECEIPT</h1>
+            <p class="normal">Mobile No : 9875156523</p>
+        </header>
+        <section>
+            <div class="invo displayrow">
+                <p>Invoice No : </p>
+                <p id="oid">RIDE_0211</p>
+            </div>
+            <div class="invDate displayrow">
+                <p>Invoice Date : </p>
+                <p id="invDate">20/03/2023</p>
+            </div>
+            <div class="invDuedate displayrow">
+                <p>Invoice Date : </p>
+                <p id="invDuedate">20/03/2023</p>
+            </div>
+            <div class="custBillto displayrow">
+                <p>Bil To : </p>
+                <p id="billto">+91 9426110147</p>
+
+            </div>
+        </section>
+        <div class="rows">
+
+            <div class="row heading">
+                <p class="f20">SERVICES</p>
+                <p class="f20">QTY</p>
+                <p class="f20">RATE</p>
+                <p class="f20">AMOUNT</p>
+            </div>
+            <div class="row">
+                <p>MOPED RENT</p>
+                <p id="min">110 MINS</p>
+                <p>1</p>
+                <p id="minAmount">110</p>
+            </div>
+            <div class="row">
+                <p>PETROL</p>
+                <p id="km">23 KIM</p>
+                <p>4.5</p>
+                <p id="kmAmount">92</p>
+            </div>
+            <div class="row">
+                <p>SUBTOTAL</p>
+                <p>-</p>
+                <p>-</p>
+                <p id="subTotal">₹ 202</p>
+            </div>
+        </div>
+        <footer>
+            <div class="condition">
+                <p class="f20">TERMS AND CONDITION</p>
+                <p>if there is any damage or scratches that occur while using the item, <br>the amount deducted will
+                    be based on the extent of the damage.</p>
+            </div>
+            <div class="price">
+                <p>TAXABLE AMOUNT</p>
+                <p id="subTotal3">₹ 202</p>
+                <p>TOTAL AMOUNT</p>
+                <p id="subTotal2">₹ 202</p>
+            </div>
+        </footer>
+    </div>
+    <input type="submit" value="Print" id="print">
+    <script type="module" src="./javascript/bill.js"></script>
+</body>
+
+</html>
